@@ -1,0 +1,33 @@
+book_list = ["python","js","c++","c","ai basic"]
+print(f"these books are available\n{book_list}\n")
+while True:
+    
+    print("~~~~~~Library Menu~~~~~~")
+    print("1. Show books")
+    print("2. Issue books")
+    print("3. Return books")
+    print("4. Exit")
+    
+    choice = int(input("chose a number : "))
+    
+    if choice == 1:
+        print(f"books are > \n{book_list}")
+    elif choice == 2:
+        book_issue = input("enter issue book name is : ").lower()
+        if book_issue in book_list:
+            book_list.remove(book_issue)  
+            print(f"{book_issue} book is successfully issued")
+        else:
+            print(f"sorry {book_issue} book is not available")    
+    elif choice == 3:
+        book_return = input("enter return book name : ")  
+        book_list.append(book_return)
+        print(f"{book_return} book is successfully returned")
+    elif choice == 4:
+        print("Thanku you have a good day!")  
+        break
+    else:
+        print("these number is not valid \ntry again \n")     
+    
+    
+    
