@@ -1,0 +1,39 @@
+while 1:
+    number1 = int(input("enter  first number : "))
+
+    number2 = int(input("enter second number : "))
+
+    print("choose any option -> ")
+    print("1. ADDITION")
+    print("2. SUBTRACTION")
+    print("3. MULTIPLICATION")
+    print("4. DIVIDE")
+    print("5. Exit")
+
+    choice = int(input("chose a number : "))
+    
+    if choice == 1:
+       add = number1 + number2
+       print(f"{number1}+{number2} = {add}")
+
+    elif choice == 2:
+       sub = number1-number2
+       print(f"{number1}-{number2} = {sub}")  
+
+    elif choice == 3:
+       mul = number1*number2
+       print(f"{number1}x{number2} = {mul}")
+
+    elif choice == 4:
+        try:
+            div = number1/number2
+            print(f"{number1}/{number2} = {div}")
+        except ZeroDivisionError as v:
+            print(f"{v} = infinite")
+
+    elif choice == 5:
+       print("Exit\nThanku")
+       break
+    
+    else :
+        print(f"{choice} is not valid\nplease enter number between 1 to 5")
